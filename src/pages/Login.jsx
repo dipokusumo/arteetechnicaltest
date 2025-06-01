@@ -25,7 +25,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/user", {
+      const response = await fetch("https://arteedipobe-production.up.railway.app/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -43,7 +43,7 @@ const Task = () => {
           return;
         }
 
-        const taskResponse = await fetch("http://localhost:5000/tasks", {
+        const taskResponse = await fetch("https://arteedipobe-production.up.railway.app/tasks", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -66,7 +66,7 @@ const Task = () => {
 
   const handleAddTask = async () => {
     try {
-      const response = await fetch("http://localhost:5000/tasks", {
+      const response = await fetch("https://arteedipobe-production.up.railway.app/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const Task = () => {
 
   const handleToggleTask = async (taskId, isDone) => {
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${taskId}`, {
+      const response = await fetch(`https://arteedipobe-production.up.railway.app/tasks/${taskId}`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -128,7 +128,7 @@ const Task = () => {
 
   const handleDeleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${taskId}`, {
+      const response = await fetch(`https://arteedipobe-production.up.railway.app/tasks/${taskId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
