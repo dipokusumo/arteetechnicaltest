@@ -35,6 +35,7 @@ Backend (.env):
  DB_USER=
  DB_PASSWORD=
  DB_NAME=
+ DB_PORT=
  PORT=
  JWT_SECRET=
  ```
